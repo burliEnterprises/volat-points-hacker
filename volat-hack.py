@@ -35,8 +35,8 @@ from selenium.webdriver.support import expected_conditions as EC
 #from seleniumrequests import Firefox   # using pure selenium now
 
 # vol.at credentials
-username = "2pac4ever"
-password = "admin123"
+__username = "2pac4ever"
+__password = "admin123"
 
 """ first option: mechanize
 # didnt work cause you're not able to post requests
@@ -62,8 +62,8 @@ now = datetime.now()
 timestamp = datetime.timestamp(now)
 # data sent to server for login:
 payload = {
-    'log': username,
-    'password': password,
+    'log': __username,
+    'password': __password,
     'rememberme': 'true',
     'time': timestamp
 }
@@ -72,8 +72,8 @@ request_login_url = 'https://www.vol.at/api/signon/login'
 #with requests.session as s:
 with HTMLSession() as s:
     p = s.post(request_login_url, data = {
-        'log': username,
-        'pwd': password,
+        'log': __username,
+        'pwd': __password,
         'rememberme': 'true',
         'time': '1552234004941'
     })
@@ -129,8 +129,8 @@ time.sleep(5)
 # fill in login form:
 username = browser.find_elements_by_name("username")
 password = browser.find_elements_by_name("password")
-username[0].send_keys(username)
-password[0].send_keys(password)
+username[0].send_keys(__username)
+password[0].send_keys(__password)
 submit_that_thang = browser.find_elements_by_class_name("vodl-login__submit")
 submit_that_thang[0].click()
 time.sleep(5)
@@ -138,8 +138,8 @@ time.sleep(5)
 
 """ #xml request from chrome tools, shit ain't working for some reason ... only god knows i guess
 response = webdriver.request('POST', request_login_url, data = {
-    'log': username,
-    'pwd': password,
+    'log': __username,
+    'pwd': __password,
     'rememberme': 'true',
     'time': timestamp
 })
