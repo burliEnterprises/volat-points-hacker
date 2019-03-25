@@ -93,6 +93,7 @@ with HTMLSession() as s:
 
 
 # grab 25 article links of the site and put it in array
+# grab 1 video link from homepage
 with HTMLSession() as s:
 
     r = s.get('https://www.vol.at/news/welt')
@@ -121,6 +122,8 @@ browser = webdriver.Chrome("D:/Programmierung-Programme/chromedriver_win32/chrom
 # OG code:
 # https://www.guru99.com/selenium-python.html
 # https://selenium-python.readthedocs.io/locating-elements.html
+
+### LOGIN
 browser.get("https://vol.at/")
 show_login_form = browser.find_elements_by_class_name("vodl-login-label__login")
 show_login_form[0].click()
@@ -147,7 +150,7 @@ print(response) """
 
 counter = 0     # to use different articles
 counter2 = 0    # to count to 200
-while counter2 < 200: # 200 request per hour as a maximum (high tech security by russmedia haha) .. used as endless loop
+while counter2 < 200: # 200 request per day as a maximum (high tech security by russmedia haha) .. used as endless loop if i wanted to run it a week w/o stopping the script
     browser.get(urls[counter])
     counter = counter + 1
     lenOfPage = browser.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;") # scroll down
@@ -155,5 +158,5 @@ while counter2 < 200: # 200 request per hour as a maximum (high tech security by
         counter = 0
     time.sleep(2)   # otherwise vol.at point counter won't update
     if (counter2 == 199):
-        time.sleep(2700)    # sleep for 45 minutes, 60 to much cause not all requests happen at the same time
+        time.sleep(86400)    # sleep for 24 hours
         counter2 = 0
