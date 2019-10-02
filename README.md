@@ -13,7 +13,7 @@ how many points can you earn a day?
 - 740 points per day are possible to make the easy route
 
 the script requires you to have an account on the site, you have to create one manually beforehand and change those credentials at line 30-40\  
-you will have to install a lot of packages via pip, i didn't put them in a extra file cause i ain't your fucking butler or some shit\
+you will have to install a lot of packages via pip, i didn't put them in a extra file cause i ain't your momma
 install chromedriver at first too and change the path at line ~ 120 (search for "chrome" to find it)\ 
 
 why the fuck am i doing this? why the fuck not.\
