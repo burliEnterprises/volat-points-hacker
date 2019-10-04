@@ -89,10 +89,10 @@ def hackThemPoints():
     #browser = webdriver.Chrome("D:/WebProjects/vol-at-hacking-points/volat-points-hacker/chromedriver.exe")
 
     #heroku config, buildpacks installed already and path variables set
-    chrome_options = Options()
-    chrome_options.binary_location = GOOGLE_CHROME_BIN
+    chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--no-sandbox')
+    chrome_options.binary_location = GOOGLE_CHROME_PATH
     browser = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
     # OG code:
     # https://www.guru99.com/selenium-python.html
