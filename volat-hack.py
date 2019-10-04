@@ -49,6 +49,9 @@ app = Flask(__name__)
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
+os.system('heroku config:set GOOGLE_CHROME_BIN=/app/.apt/usr/bin/google_chrome')
+os.system('heroku config:set CHROMEDRIVER_PATH=/app/.chromedriver/bin/chromedriver')
+
 
 # vol.at credentials
 __username = "2pac4ever"
