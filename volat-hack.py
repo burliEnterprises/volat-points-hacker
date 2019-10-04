@@ -49,8 +49,30 @@ app = Flask(__name__)
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
-os.system('heroku config:set GOOGLE_CHROME_BIN=/app/.apt/usr/bin/google_chrome')
-os.system('heroku config:set CHROMEDRIVER_PATH=/app/.chromedriver/bin/chromedriver')
+
+def removeQuotesFromValue(value):
+	value = value.replace("'", '"')
+	# value = value.replace('"', "")
+	return value
+
+def splitLineIntoParts(line):
+	line = line.lstrip()
+	line = line.rstrip()
+	line = removeQuotesFromValue(line)
+	line = line.split("=", 1)
+	return line
+
+
+with open('.env') as e:
+	for line in e:
+		l = splitLineIntoParts(line)
+		if (len(l) > 1):
+			name = l[0]
+			value = l[1]
+			print()
+            os.system('heroku config:set GOOGLE_CHROME_BIN=/app/.apt/usr/bin/google_chrome')
+            os.system('heroku config:set CHROMEDRIVER_PATH=/app/.chromedriver/bin/chromedriver')
+
 
 
 # vol.at credentials
