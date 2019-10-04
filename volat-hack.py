@@ -60,7 +60,17 @@ __password = "admin123"
 
 
 
-@app.route('/hacking', methods=['POST'])
+@app.route('/hacking', methods=['GET'])
+def verwaltung():
+    hackThemPoints()
+    res = json.dumps({"what's up ": "a lot"})
+    print(res)
+    r = make_response(res)
+    r.headers['Content-Type'] = 'application/json'
+    return r
+
+
+
 def hackThemPoints():
 
     # grab 25 article links of the site and put it in array
@@ -122,6 +132,7 @@ def hackThemPoints():
         browser.get(urls[counter])
         counter = counter + 1
         lenOfPage = browser.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;") # scroll down
+        print("executing")
         if (counter == len(urls)):
             counter = 0
         time.sleep(2)   # otherwise vol.at point counter won't update
@@ -129,9 +140,9 @@ def hackThemPoints():
             time.sleep(86400)    # sleep for 24 hours
             counter2 = 0
 
-    res = json.dumps({"what's up ": "a lot"})
+    """res = json.dumps({"what's up ": "a lot"})
     print(res)
-    """r = make_response(res)
+    r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
     return r"""
 
