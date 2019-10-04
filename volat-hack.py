@@ -60,7 +60,7 @@ __password = "admin123"
 
 
 
-@app.route('/hacking', methods=['GET'])
+@app.route('/hacking', methods=['POST'])
 def hackThemPoints():
 
     # grab 25 article links of the site and put it in array
@@ -131,9 +131,9 @@ def hackThemPoints():
 
     res = json.dumps({"what's up ": "a lot"})
     print(res)
-    r = make_response(res)
+    """r = make_response(res)
     r.headers['Content-Type'] = 'application/json'
-    return r
+    return r"""
 
 
 
