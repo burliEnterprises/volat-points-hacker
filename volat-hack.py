@@ -80,13 +80,20 @@ def hackThemPoints():
         print(urls)
 
 
+
     """ selenium
     # opens chrome window so you can "watch" the whole process
     # requires chromedriver to be installed on your machine
     """
-    """browser = webdriver.Chrome("D:/WebProjects/vol-at-hacking-points/volat-points-hacker/chromedriver.exe")
-    #browser = webdriver.Firefox("D:/Programmierung-Programme/geckodriver/geckodriver.exe")
+    #lokal:
+    #browser = webdriver.Chrome("D:/WebProjects/vol-at-hacking-points/volat-points-hacker/chromedriver.exe")
 
+    #heroku config, buildpacks installed already and path variables set
+    chrome_options = Options()
+    chrome_options.binary_location = GOOGLE_CHROME_BIN
+    chrome_options.add_argument('--disable-gpu')
+    chrome_options.add_argument('--no-sandbox')
+    browser = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
     # OG code:
     # https://www.guru99.com/selenium-python.html
     # https://selenium-python.readthedocs.io/locating-elements.html
@@ -108,7 +115,7 @@ def hackThemPoints():
 
     counter = 0     # to use different articles
     counter2 = 0    # to count to 200
-    """"""while counter2 < 199: # 200 request per day as a maximum (high tech security by russmedia haha) .. used as endless loop if i wanted to run it a week w/o stopping the script
+    """while counter2 < 199: # 200 request per day as a maximum (high tech security by russmedia haha) .. used as endless loop if i wanted to run it a week w/o stopping the script
         browser.get(urls[counter])
         counter = counter + 1
         lenOfPage = browser.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;") # scroll down
