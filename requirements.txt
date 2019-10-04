@@ -1,0 +1,5 @@
+Flask==1.1.1
+future==0.17.1
+requests-html==0.10.0
+requests>=2.7.0
+selenium==3.141.0
