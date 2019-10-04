@@ -49,33 +49,8 @@ app = Flask(__name__)
 app.logger.addHandler(logging.StreamHandler(sys.stdout))
 app.logger.setLevel(logging.ERROR)
 
-
-def removeQuotesFromValue(value):
-	value = value.replace("'", '"')
-	# value = value.replace('"', "")
-	return value
-
-def splitLineIntoParts(line):
-	line = line.lstrip()
-	line = line.rstrip()
-	line = removeQuotesFromValue(line)
-	line = line.split("=", 1)
-	return line
-
-def setConfigVar():
-    os.system('heroku config:set GOOGLE_CHROME_BIN=/app/.apt/usr/bin/google_chrome')
-    os.system('heroku config:set CHROMEDRIVER_PATH=/app/.chromedriver/bin/chromedriver')
-
-with open('.env') as e:
-
-	for line in e:
-		l = splitLineIntoParts(line)
-		if (len(l) > 1):
-			name = l[0]
-			value = l[1]
-			print()
-			setConfigVar()
-
+os.system('heroku config:set GOOGLE_CHROME_BIN=/app/.apt/usr/bin/google_chrome')
+os.system('heroku config:set CHROMEDRIVER_PATH=/app/.chromedriver/bin/chromedriver')
 
 
 # vol.at credentials
@@ -120,8 +95,8 @@ def hackThemPoints():
     chrome_options = webdriver.ChromeOptions()
     chrome_options.add_argument('--disable-gpu')
     chrome_options.add_argument('--no-sandbox')
-    chrome_options.binary_location = GOOGLE_CHROME_PATH
-    browser = webdriver.Chrome(executable_path=CHROMEDRIVER_PATH, chrome_options=chrome_options)
+    chrome_options.binary_location = '/app/.apt/usr/bin/google_chrome'
+    browser = webdriver.Chrome(executable_path='/app/.chromedriver/bin/chromedriver', chrome_options=chrome_options)
     # OG code:
     # https://www.guru99.com/selenium-python.html
     # https://selenium-python.readthedocs.io/locating-elements.html
