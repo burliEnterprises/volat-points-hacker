@@ -126,7 +126,7 @@ def hackThemPoints():
 
     counter = 0     # to use different articles
     counter2 = 0    # to count to 200
-    while counter2 < 10: # 200 request per day as a maximum (high tech security by russmedia haha) .. used as endless loop if i wanted to run it a week w/o stopping the script
+    while counter2 < 2: # 200 request per day as a maximum (high tech security by russmedia haha) .. used as endless loop if i wanted to run it a week w/o stopping the script
         browser.get(urls[counter])
         counter = counter + 1
         lenOfPage = browser.execute_script("window.scrollTo(0, document.body.scrollHeight);var lenOfPage=document.body.scrollHeight;return lenOfPage;") # scroll down
@@ -137,6 +137,7 @@ def hackThemPoints():
         if (counter2 == 199):
             time.sleep(86400)    # sleep for 24 hours
             counter2 = 0
+        counter2 += 1
 
     """res = json.dumps({"what's up ": "a lot"})
     print(res)
