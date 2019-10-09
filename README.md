@@ -33,6 +33,7 @@ Although a GUI etc. is included in the program, you will need to install some we
 
  ## Usage:
  Once everything is set up, we're good to go. Double click on the file `execute_program.bat` and the program will open. Simply enter your login credentials into the beautifully designed GUI 🤮 to start the magic :)
+ You can earn about 750 points per day, I would recommend you to wait 24 hours before using it again, otherwise it might not work.
 
 ## Don't read if you can't code 😉:
 
