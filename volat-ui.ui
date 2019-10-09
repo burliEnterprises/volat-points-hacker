@@ -1,0 +1,118 @@
+<?xml version='1.0' encoding='utf-8'?>
+<interface>
+  <object class="tk.Frame" id="toplevel_ui">
+    <property name="padx">0</property>
+    <property name="pady">0</property>
+    <property name="takefocus">true</property>
+    <child>
+      <object class="tk.Text" id="Text_2">
+        <property name="blockcursor">false</property>
+        <property name="height">5</property>
+        <property name="maxundo">0</property>
+        <property name="setgrid">false</property>
+        <property name="state">disabled</property>
+        <property name="takefocus">false</property>
+        <property name="text" translatable="yes">Hello there :)
+You will need an account on vol.at to run this program. So if you don't have one, go get one. That's it, have fun!</property>
+        <property name="width">50</property>
+        <property name="wrap">word</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipady">0</property>
+          <property name="padx">20</property>
+          <property name="pady">20</property>
+          <property name="propagate">True</property>
+          <property name="row">0</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="Label_1">
+        <property name="takefocus">false</property>
+        <property name="text" translatable="yes">Username:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">10</property>
+          <property name="padx">20</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Entry" id="input_username">
+        <property name="cursor">arrow</property>
+        <property name="exportselection">true</property>
+        <property name="insertofftime">0</property>
+        <property name="insertontime">0</property>
+        <property name="justify">left</property>
+        <property name="selectborderwidth">0</property>
+        <property name="takefocus">true</property>
+        <property name="textvariable">string:inp_str_username</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">1</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Entry" id="input_password">
+        <property name="takefocus">true</property>
+        <property name="textvariable">string:inp_str_password</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="btn_hacking">
+        <property name="command">start_hacking</property>
+        <property name="text" translatable="yes">Start hacking :)</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">10</property>
+          <property name="ipady">2</property>
+          <property name="padx">20</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="ttk.Label" id="Label_2">
+        <property name="takefocus">false</property>
+        <property name="text" translatable="yes">Password:</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">10</property>
+          <property name="padx">20</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">2</property>
+          <property name="sticky">w</property>
+        </layout>
+      </object>
+    </child>
+    <child>
+      <object class="tk.Button" id="btn_github">
+        <property name="command">go_github</property>
+        <property name="text" translatable="yes">View code (GitHub)</property>
+        <layout>
+          <property name="column">0</property>
+          <property name="ipadx">10</property>
+          <property name="ipady">2</property>
+          <property name="padx">20</property>
+          <property name="pady">10</property>
+          <property name="propagate">True</property>
+          <property name="row">4</property>
+        </layout>
+      </object>
+    </child>
+  </object>
+</interface>
