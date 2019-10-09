@@ -5,12 +5,14 @@ Hello there 😊 I'd like to thank you for making the time to look at my code in
 
 I'd also like to thank Russmedia for making all of this possible. This wouldn't have been possible without your crappy programming and low level security 😉
 
+
 ## Description:
 
 This tool basically allows you to craft *Ländepunkte* on the Vorarlberger "news" page *Vorarlberg Online (vol.at).*
 In case you don't know: Vorarlberg Online is the leading online platform in the area, although it actually consists of about 80% ads, 19% weird but funny comments & 1% news-worthy posts.
 
 You can use your earned points to get free stuff like mugs, towels, vouchers & bags. Visit their page to see the full selection of gifts.
+
 
 ## Prerequisites:
 
@@ -31,8 +33,11 @@ Although a GUI etc. is included in the program, you will need to install some we
  **3. Download or clone this repository**
  You'll need to get my code on your machine. Either clone the repo by using Git or simply download it by clicking the green button above (unzip it too, once the download is completed!)
 
+
  ## Usage:
+ 
  Once everything is set up, we're good to go. Double click on the file `execute_program.bat` and the program will open. Simply enter your login credentials into the beautifully designed GUI 🤮 to start the magic :)
+
 
 ## Don't read if you can't code 😉:
 
