@@ -37,23 +37,29 @@ class HackingShit:
         # grab 1 video link from homepage --> In Selenium not implemented yet
         with HTMLSession() as s:
             r = s.get('https://www.vol.at/news/welt')
-            mail = r.html.find('.vodl-lead-flex-m__media')
+            #mail = r.html.find('.vodl-lead-flex-m__media')
+            mail = r.html.find('.vodl-media')
             urls = []
             counter = 0
             print (len(mail))
             while counter < len(mail):
                 x = str(mail[counter])
-                y = x.split("href='")
+                y = x.split("href='")   
+                print(y)
                 z = y[1].split("'")
-                urls.append(z[0])
+                if z[0].find("vol.at") == -1:
+                    # other url like vn.at redirect, dont add 
+                    print("other url")
+                else:
+                    urls.append(z[0])
                 counter = counter + 1
             print(urls)
-
         #selenium
         # opens chrome window so you can "watch" the whole process
         # requires chromedriver to be installed on your machine
 
         #local webdriver, exe in directory, else path:
+        # webdriver must fit chrome version, download here https://chromedriver.chromium.org/downloads
         browser = webdriver.Chrome("chromedriver.exe")
 
         """heroku config, buildpacks installed already and path variables set

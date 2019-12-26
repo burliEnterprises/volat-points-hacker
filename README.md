@@ -1,9 +1,8 @@
 # VolAT Points Hacker
 ![hacking cat](https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif)
 
-Hello there 😊 I'd like to thank you for making the time to look at my code instead of doing something reasonable like spending money on Wish (have you heard of [WishWiz](https://chrome.google.com/webstore/detail/the-wishwiz/lkijfedegilaikaacnoblhekmlegpeln)?) or listening to the new Rebecca Black album. I greatly apprectiate your efforts!
-
-I'd also like to thank Russmedia for making all of this possible. This wouldn't have been possible without your crappy programming and low level security 😉
+Hello there 😊 I'd like to thank you for making the time to look at my code instead of doing something reasonable like spending money on Wish (have you heard of [WishWiz](https://chrome.google.com/webstore/detail/the-wishwiz/lkijfedegilaikaacnoblhekmlegpeln)?).
+I'd also like to thank Russmedia. This wouldn't have been possible without your crappy programming 😉
 
 
 ## Description:
@@ -17,7 +16,7 @@ You can use your earned points to get free stuff like mugs, towels, vouchers & b
 ## Prerequisites:
 
 Although a GUI etc. is included in the program, you will need to install some weird looking things beforehand on your own.
-*Important: If you don't use Windows, the program might or might not work, but ... well ... go figure it out on your own haha shouldn't have bought that overpriced thing with half an apple on it* 😘
+*Important: If you don't use Windows, the program might or might not work, but ... well ... go figure it out on your own haha* 😘
 
 **1. Download & Install Python:**
  You'll need to install Python3 on your local machine. If you don't know how to do that, have a look [here](https://realpython.com/installing-python/).
