@@ -2,7 +2,6 @@
 ![hacking cat](https://media.giphy.com/media/o0vwzuFwCGAFO/giphy.gif)
 
 Hello there 😊 I'd like to thank you for making the time to look at my code instead of doing something reasonable like spending money on Wish (have you heard of [WishWiz](https://chrome.google.com/webstore/detail/the-wishwiz/lkijfedegilaikaacnoblhekmlegpeln)?).
-I'd also like to thank Russmedia. This wouldn't have been possible without your crappy programming 😉
 
 
 ## Description:
